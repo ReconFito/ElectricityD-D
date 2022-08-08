@@ -1,0 +1,141 @@
+{% extends "index.html" %}
+{% block body %}
+<!-- Page Content-->
+<section class="">
+    <div class="container px-5 my-5">
+        <div class="text-center mb-5">
+            <h1 class="fw-bolder my-0">Nuestros Servicios</h1>
+            <p class="lead fw-normal text-muted mb-0">Selecciona el que necesitas</p>
+        </div>
+        <div class="row gx-5">
+            <div class="col-lg-6">
+                <div class="mb-5 service-card">
+                    <div class="service-details rounded mb-3">
+                        <img class="img-fluid"
+                            src="{{ url_for('static', filename='assets/img/reparaciones-electricas.jpg') }}"
+                            alt="Reparaciones Electricas" />
+                        <div class="service-card-info rounded">
+                            <h3>Reparaciones</h3>
+                            <ul>
+                                <li>Revisión de los posibles problemas</li>
+                                <li>Cambio de tomacorriente</li>
+                                <li>Cambio de plafones</li>
+                                <li>Cambio de circuitos y su cableado</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <a class="h3 fw-bolder text-decoration-none link-dark stretched-link" href="#!">Reparaciones
+                        Electricas</a>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="position-relative mb-5 service-card">
+                    <div class="service-details mb-3 rounded">
+                        <img class="img-fluid rounded"
+                            src="{{ url_for('static', filename='assets/img/instelectricas.jpg') }}" alt="..." />
+                        <div class="service-card-info rounded">
+                            <h3>Instalación Eléctrica</h3>
+                            <p>
+                            <ul>
+                                <li>Restructuración de una instalación eléctrica.</li>
+                                <li>Instalación desde cero partiendo de un punto estratégico para el centro de carga así
+                                    facilitando la movilidad del cableado y el consumo del mismo.</li>
+                                <li>Trabajando con el mejor material posible para realizar un buen trabajo.</li>
+                            </ul>
+                            </p>
+                        </div>
+                    </div>
+                    <a class="h3 fw-bolder text-decoration-none link-dark stretched-link" href="#!">Instalaciones
+                        Electricas</a>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="position-relative mb-5 service-card mb-lg-0">
+                    <div class="service-details rounded mb-3">
+                        <img class="img-fluid" src="{{ url_for('static', filename='assets/img/planos.jpg') }}"
+                            alt="Lectura de Planos" />
+                        <div class="service-card-info rounded">
+                            <h3>Lectura de Planos</h3>
+                            <p>
+                                Les brindamos el servicio de lectura de planos donde le ayudamos a interpretar las
+                                normas
+                                que deben cumplir en la contrucción de la obra, tambien el proceso debe llevar la
+                                materializacion de la obra de acuerdo a cada etapa trazada en el plano.
+                            </p>
+                        </div>
+
+                    </div>
+                    <a class="h3 fw-bolder text-decoration-none link-dark stretched-link" href="#!">Lectura de
+                        Planos</a>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="position-relative service-card">
+                    <div class="service-details rounded mb3">
+                        <img class="img-fluid" src="{{ url_for('static', filename='assets/img/diseño_planos.webp') }}"
+                            alt="Creación de planos" />
+                        <div class="service-card-info rounded">
+                            <h3>Creación de Planos</h3>
+                            <p>
+                            <ul>
+                                <li>Planos de situación y emplazamiento</li>
+                                <li>Plano de simentación</li>
+                                <li>Plano de instalaciones</li>
+                                <li>Planos de secciones entre otros</li>
+                            </ul>
+                            </p>
+                        </div>
+                    </div>
+                    <a class="h3 fw-bolder text-decoration-none link-dark stretched-link" href="#!">Creación de
+                        planos</a>
+                </div>
+
+            </div>
+            <div class="col-lg-6 mt-5">
+                <div class="position-relative service-card">
+                    <div class="service-details rounded mb-3">
+                        <img class="img-fluid"
+                            src="{{ url_for('static', filename='assets/img/explaining-chart.webp') }}"
+                            alt="Cotizaciones" />
+                        <div class="service-card-info rounded">
+                            <h3>Cotizaciones</h3>
+                            <p>
+                                Puedes cotizar con nosotros la instalación eléctrica total de tu nuevo proyecto, puede
+                                incluir material que se requiera o solamente la mano de obra.
+                                También puedes cotizar con nosotros la reparación de una conexión eléctrica ya existente
+                                en
+                                tu negocio u hogar.
+                            </p>
+                        </div>
+                    </div>
+                    <a class="h3 fw-bolder text-decoration-none link-dark stretched-link" href="#!">Cotizaciones</a>
+                </div>
+            </div>
+            <div class="col-lg-6 mt-5">
+                <div class="position-relative service-card">
+                    <div class="service-details rounded mb-3">
+                        <img class="img-fluid"
+                            src="{{ url_for('static', filename='assets/img/worker.jpg') }}"
+                            alt="Revisiones de conexiones electricas." />
+                        <div class="service-card-info rounded">
+                            <h3>Revisiones Eléctricas</h3>
+                            <p>
+                                Te ayudamos a efectuar revisiones a toda la conexión electica de tu hogar o negocio.
+                                Reemplazamos toda la conexión eléctrica que se encuentre en mal estado o bien hacemos
+                                reparaciones por sectores.
+                            </p>
+                        </div>
+                    </div>
+                    <a class="h3 fw-bolder text-decoration-none link-dark stretched-link" href="#!">Revisiones de
+                        conexiones electricas</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="py-5 bg-light">
+    <div class="container px-5 my-5">
+        <h2 class="display-4 fw-bolder mb-4">Construyamos algo juntos</h2>
+    </div>
+</section>
+{% endblock body %}

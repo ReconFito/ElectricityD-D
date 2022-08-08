@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css?family=Muli:400,700&display=swap");
+
+.service-card {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card .service-details {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    width: 100%;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+}
+
+header.header { position:relative}
+header.header::before {
+    content: "";
+    position: absolute;
+    bottom: calc(0% - 35px);
+    left: calc(50% - 25px);
+    width: 0;
+    height: 0;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-top: 35px solid #212529;
+}
+.service-card:hover .service-card-info {
+    top: 0;
+}
+.service-card-info {
+    background:linear-gradient(135deg, #5b247a 0%,#1bcedf 100%);
+    position: absolute;
+    height: 100%;
+    max-width: 100%;
+    width: 100vw;
+    top: -100%;
+    left: 0;
+    padding: 1rem;
+    transition: top .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+.service-card-info h3 {
+    display: block;
+    text-align: center;
+}
+* {
+    font-family: "Muli", sans-serif;   
+}
+
+body {
+    margin: 0;
+    height: calc(100vh - 8em);
+    font-family: "Muli", sans-serif;
+    background-color: #f5f5f5;
+}
+
+h1 {
+    text-align: center;
+    margin: 4em;
+}
+
+.container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.container .items {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    animation: carouselAnim 60s infinite alternate linear;
+}
+
+.container .items .entry {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    width: 300px;
+    background: white;
+    margin: 1em;
+    padding: 0.5em;
+    border-radius: 10px;
+    box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.05);
+}
+
+.container .items .entry p {
+    text-align: center;
+    padding: 1em;
+}
+
+.container .items .entry p.name {
+    font-weight: bold;
+}
+
+@keyframes carouselAnim {
+    from {
+        transform: translate(0, 0);
+    }
+
+    to {
+        transform: translate(calc(-100% + (5*300px)));
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .container .items {
+        animation: carouselAnim 30s infinite alternate linear;
+    }
+
+    @keyframes carouselAnim {
+        from {
+            transform: translate(0, 0);
+        }
+
+        to {
+            transform: translate(calc(-100% + (2*300px)));
+        }
+    }
+}
+
+.image-view {
+    width: 50rem;
+    height: 15rem;
+    transform: skewY(3deg);
+}
+.container .faders {
+    width: 100%;
+    position: absolute;
+    height: 100%;
+}
+.container .faders .left {
+    left: -1%;
+}
+.container .faders .left,
+.container .faders .right {
+    background: linear-gradient(to right, whitesmoke 0%, rgba(255, 255, 255, 0) 100%);
+    width: 20%;
+    height: 100%;
+    position: absolute;
+    z-index: 200;
+}
+
+.container .faders .right {
+    right: 0;
+    background: linear-gradient(to left, whitesmoke 0%, rgba(255, 255, 255, 0) 100%);
+}

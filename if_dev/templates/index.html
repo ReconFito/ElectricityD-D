@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Propocionamos los mejores servicios" />
+    <meta name="author" content="" />
+    {% if(title) %}
+    <title>ElectricityDYD-{{ title }}</title>
+    {% else %}
+    <title>ElectricityDYD</title>
+    {% endif %}
+    <!-- Favicon-->
+    <!-- <link rel="icon" type="image/x-icon" href="assets/favicon.ico" /> -->
+    <!-- Bootstrap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Bootstrap -->
+    <link href="{{ url_for('static', filename='/css/styles.css') }}" rel="stylesheet" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/site_styles.css') }}">
+</head>
+
+<body class="d-flex flex-column h-100">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container px-5">
+            <a class="navbar-brand" href="{{ url_for('main.index') }}">ElectricityD&D</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('main.index') }}">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('main.about') }}">Acerca de Nosotros</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('main.contact') }}">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('main.team') }}">Nuestro Equipo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('main.services') }}">Servicios</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Header-->
+    <header class="bg-dark py-5 header">
+        <div class="container px-5">
+            <div class="row gx-5 align-items-center justify-content-center">
+                <div class="col-lg-8 col-xl-7 col-xxl-6">
+                    <div class="my-5 text-center text-xl-start">
+                        <h1 class="display-5 fw-bolder text-white mb-0">ElectricityDYD</h1>
+                        <p class="lead fw-normal text-white-50 mb-4">
+                            Nunca había sido tan fácil contratar un servicio de
+                            electricidad!!</p>
+                    </div>
+                </div>
+                <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center">
+                    <img class="img-fluid rounded-2 my-5 image-view" src="{{ url_for('static', filename=image) }}"
+                        alt="Page Presentation Image" />
+                </div>
+            </div>
+        </div>
+    </header>
+
+    {% block body %}{% endblock body %}
+
+    <!-- Footer-->
+    <footer class="bg-dark py-4 mt-auto">
+        <div class="container px-5">
+            <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+                <div class="col-auto">
+                    <div class="small m-0 text-white">Copyright &copy; UMCA 2022</div>
+                </div>
+                <div class="col-auto">
+                    <span class="small text-muted">ElectricityD&amp;D</span>
+                    <span class="small text-muted">|</span>
+                    <a class="link-light small" href="{{ url_for('main.contact') }}">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Bootstrap core JS -->
+    <script src="{{ url_for('static', filename='css/bootstrap-5.2.0/js/bootstrap.bundle.min.js') }}"></script>
+    <!-- Core theme JS -->
+    <!-- <script src="{{ url_for('static', filename='/js/scripts.js') }}"></script> -->
+
+</body>
+
+</html>
